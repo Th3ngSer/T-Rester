@@ -1,0 +1,191 @@
+body {
+    background-color: #0f172a;
+    overflow-x: hidden;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling for the search bar container */
+#search-form {
+    width: 250px; /* Default width */
+    transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+#search-form:hover {
+    width: 300px; /* Expand width on hover */
+}
+
+/* Styling for the input field */
+#search-input {
+    font-size: 1rem; /* Adjust font size */
+    color: #333; /* Text color */
+}
+
+/* Styling for the search button */
+#search-form button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Enhanced Navigation Styling with Active States */
+nav ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+  background-color: rgba(128, 155, 79, 0.432);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+/* Active state styling - adds underline */
+nav ul li a.active {
+  color: #ffd700; 
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+/* Active state hover effect */
+nav ul li a.active:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
+/* Alternative underline animation effect  */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #ffd700;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  width: 80%;
+}
+
+nav ul li a.active::after {
+  width: 80%;
+}
+
+/* For current page indicator */
+nav ul li a[data-current="true"] {
+  color: #ffd700;
+  border-bottom: 3px solid #ffd700;
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+
+.dish-item img   {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+
+@keyframes shimmer {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+}
+
+/* Staggered Pop-Up Animation for Carousel Content */
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start further down */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+
+@media (max-width: 768px) {
+    #heroCarousel {
+        height: 400px; 
+    }
+    .hero-slide h1 {
+        font-size: 3rem; 
+    }
+    .hero-slide p {
+        font-size: 1rem; 
+    }
+    #prevBtn, #nextBtn {
+        font-size: 1.8rem; 
+        padding: 8px 12px;
+    }
+}
+@keyframes shimmer {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);  
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);  
+  }
+}
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #heroCarousel { height: 400px; }
+    .hero-slide h1 { font-size: 3rem; }
+    .hero-slide p { font-size: 1rem; }
+    #prevBtn, #nextBtn {
+        font-size: 1.8rem;
+        padding: 8px 12px;
+    }
+    /* Adjust header layout for small screens */
+    header nav {
+        flex-direction: column; /* Stack logo, nav, search vertically */
+        padding-bottom: 1rem; /* Add some space at the bottom */
+    }
+    header nav ul {
+        flex-wrap: wrap; /* Allow navigation links to wrap */
+        justify-content: center; /* Center them when wrapped */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    header nav ul li {
+        margin: 0.5rem; /* Add space between wrapped links */
+    }
+    #search-form {
+        width: 90%; /* Make search form wider on small screens */
+        max-width: none;
+    }
+}
