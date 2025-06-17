@@ -384,3 +384,36 @@ footer .flex a:hover svg {
     color: black; 
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
 }
+
+/* Modal styles */
+#photo-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
+    z-index: 50; /* Ensure it appears above other elements */
+    justify-content: center;
+    align-items: center;
+}
+
+#photo-modal img {
+    max-width: 90%; /* Limit photo size */
+    max-height: 90%; /* Limit photo size */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+#photo-modal button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#photo-modal button:hover {
+    color: #f59e0b; /* Highlight close button on hover */
+}

@@ -121,9 +121,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const phoneInput = document.getElementById("phone");
         const phoneValue = phoneInput.value;
-        const phonePattern = /^\d{10}$/; // Assuming a 10-digit phone number
+        const phonePattern = /^\d{9,}$/; // Assuming a 9-digit phone number
         if (!phonePattern.test(phoneValue)) {
-            alert("Please enter a valid 10-digit phone number.");
+            alert("Please enter a valid 9-digit phone number.");
             return;
         }
 

@@ -230,3 +230,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const photos = document.querySelectorAll(".menu-photo");
+    const modal = document.getElementById("photo-modal");
+    const modalPhoto = document.getElementById("modal-photo");
+    const closeModal = document.getElementById("close-modal");
+
+    // Open modal when a photo is clicked
+    photos.forEach(photo => {
+        photo.addEventListener("click", () => {
+            const fullPhotoSrc = photo.getAttribute("data-src");
+            modalPhoto.src = fullPhotoSrc; // Set the modal photo source
+            modal.style.display = "flex"; // Show the modal
+        });
+    });
+
+    // Close modal when the close button is clicked
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none"; // Hide the modal
+    });
+
+    // Close modal when clicking outside the photo
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none"; // Hide the modal
+        }
+    });
+});
