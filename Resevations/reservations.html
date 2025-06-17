@@ -1,196 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservations pages</title>
-    <link rel="stylesheet" href="reservations.css">
-     <script src="https://cdn.tailwindcss.com"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reservations pages</title>
+	<link rel="stylesheet" href="reservations.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <header class="shadow-md pt-2 top-0 z-50 sticky">
-        <nav class="container mx-auto flex justify-between items-center px-8 mt-4">
-            <button>
-                <img src="/Photo/Logo.png" class="w-15 h-20 rounded-full hover:text-sky-500 ext-5xl font-bold transition duration-200">
-                <p class="text-yellow-500 font-medium">T - Rester</p>
-            </button>
-        <ul class="flex space-x-4 margin-right-8 text-xl">
-                <li><a href="/index.html" class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Home</a></li>
-                <li><a href="/About_us/about.html" class="nav-link text-yellow-500 hover:text-white-600 font-medium transition duration-200">About us</a></li>
-                <li><a href="/Menu/menu.html" class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Menu</a></li>
-                <li><a href="/Resevations/reservations.html" class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Pages</a></li>
-                <li><a href="/Contact_us/contact.html" class="nav-link text-yellow-500 hover:text-white-600 font-medium transition duration-200">Contact us</a></li>
-                <li>
-                    <form id="search-form" class="relative flex items-center bg-gray-200 rounded-full shadow-md hover:shadow-lg transition duration-300">
-                    <input 
-                        type="text" 
-                        id="search-input" 
-                        placeholder="Search..." 
-                        class="bg-transparent text-gray-700 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gold-700 w-48 transition duration-300"
-                    >
-                    <button 
-                        type="submit" 
-                        class="absolute right-2 text-gray-500 hover:text-gray-700 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m2.85-6.15a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-        <hr class="border-t-2 border-gold-700 w-full mt-2">
-    </header>
-
-    
-   <section id="reservations" class="py-16 bg-gray-100">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold text-gray-900 mb-6">Make a Reservation</h2>
-    <p class="text-lg text-gray-700 mb-4">To book a table, please fill out the form below:</p>
-
-    <form id="reservation-form" class="bg-white= p-6 rounded-lg shadow-md">
-      <div class=" grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-          <input type="text" id="name" name="name" required class="mt-1 block w-full border border-black-300 text-gray-900 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
-        </div>
-        <div>
-            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-black-300 text-gray-900 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
-        </div>
-        <div>
-          <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-          <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-black-300 text-gray-900 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
-        </div>
-
-        <div>
-            <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
-            <input type="date" id="date" name="date" required class="mt-1 block w-full border border-black-300 text-gray-900 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
-        </div>
-
-        <div>
-            <label for="time" class="block text-sm font-medium text-gray-700">Time</label>
-            <input type="time" id="time" name="time" required class="mt-1 block w-full border border-black-300 text-gray-900 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
-        </div>
-
-        <div>
-            <label for="occasion" class="block text-sm font-medium text-gray-700">Occasion</label>
-            <select id="occasion" name="occasion" class="mt-1 block w-full border border-black-300 text-gray-900 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
-                <option value="dining">Dining</option>
-                <option value="birthday">Birthday</option>
-                <option value="anniversary">Anniversary</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        <div class="mt-4">
-            <label for="guests" class="block text-sm font-medium text-gray-700">Number of Guests</label>
-            <input type="number" id="guests" name="guests" required min="1" max="20" class="mt-1 block w-full border border-gray-300 text-gray-900 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
-        </div>
-        <div class="mt-4">
-            <label for="special-requests" class="block text-sm font-medium text-gray-700">Special Requests</label>
-            <textarea id="special-requests" name="special-requests" rows="2" class="mt-1 block w-full border border-black-300 text-gray-900 rounded-md shadow-sm focus:ring focus:ring-yellow-600"></textarea>
-    </div>
-
-      <button type="submit" class="submit mt-6 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-md transition duration-200">
-        Reserve Table
-      </button>
-    </form>
-  </div>
-</section>
+	<header class="shadow-md pt-2 top-0 z-50 sticky">
+		<nav class="container mx-auto flex justify-between items-center px-8 mt-4">
+			<button>
+				<img src="/Photo/Logo.png"
+					class="w-15 h-20 rounded-full hover:text-sky-500 ext-5xl font-bold transition duration-200">
+				<p class="text-yellow-500 font-medium">T - Rester</p>
+			</button>
+			<ul class="flex space-x-4 margin-right-8 text-xl">
+				<li><a href="/index.html"
+						class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Home</a>
+				</li>
+				<li><a href="/About_us/about.html"
+						class="nav-link text-yellow-500 hover:text-white-600 font-medium transition duration-200">About
+						us</a></li>
+				<li><a href="/Menu/menu.html"
+						class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Menu</a>
+				</li>
+				<li><a href="/Resevations/reservations.html"
+						class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Pages</a>
+				</li>
+				<li><a href="/Contact_us/contact.html"
+						class="nav-link text-yellow-500 hover:text-white-600 font-medium transition duration-200">Contact
+						us</a></li>
+				<li>
+					<form id="search-form"
+						class="relative flex items-center bg-gray-200 rounded-full shadow-md hover:shadow-lg transition duration-300">
+						<input type="text" id="search-input" placeholder="Search..."
+							class="bg-transparent text-gray-700 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gold-700 w-48 transition duration-300">
+						<button type="submit"
+							class="absolute right-2 text-gray-500 hover:text-gray-700 transition duration-300">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+								stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M21 21l-4.35-4.35m2.85-6.15a7 7 0 11-14 0 7 7 0 0114 0z" />
+							</svg>
+						</button>
+					</form>
+				</li>
+			</ul>
+		</nav>
+		<hr class="border-t-2 border-gold-700 w-full mt-2">
+	</header>
 
 
-<section class="py-16 bg-white">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div class="text-center md:text-left">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Visit Us</h2>
-                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Operating Hours</h3>
-                <ul class="text-lg text-gray-700 space-y-2 mb-6">
-                    <li>** Monday - Friday:** 11:00 AM - 10:00 PM</li>
-                    <li>** Saturday - Sunday:** 10:00 AM - 11:00 PM</li>
-                    <li>** Public Holidays:** Please call for hours</li>
-                </ul>
-                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Find Us</h3>
-                <p class="text-lg text-gray-700 mb-4">** 123 Khmer Street, Phnom Penh, Cambodia</p>
-                <p class="text-lg text-gray-700 mb-6">** Email: info@T-Rester.com</p>
-                <p class="text-lg text-gray-700 mb-6">** Phone: +855 96 728 033 1</p>
-                <a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank" class="btn-primary inline-block">Get Directions</a>
-            </div>
-            <div class="map-placeholder bg-gray-300 w-full h-80 rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.120023617196!2d104.91039868710332!3d11.558363765103444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513dc76a6be3%3A0x9c00e628ee3e911c!2sPhnom%20Penh%2C%20Cambodia!5e0!3m2!1sen!2suk!4v1701234567890!5m2!1sen!2suk"
-                    width="100%"
-                    height="100%"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Google Maps Location of Delicious Bites"
-                ></iframe>
-            </div>
-        </div>
-    </section>
+	<section id="reservations" class="py-16 bg-gray-100">
+		<div class="container mx-auto px-4">
+			<h2 class="text-4xl font-bold text-gray-900 mb-6 ">Make a Reservation</h2>
+			<p class="text-lg text-gray-700 mb-4">To book a table, please fill out the form below:</p>
 
-    
-    <footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="container mx-auto px-4">
-        <!-- Footer Top Section -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-            <!-- About Section -->
-            <div>
-                <h3 class="text-xl font-bold text-white mb-4">About Us</h3>
-                <p class="text-gray-400 text-sm">
-                    T-Rester is dedicated to serving the finest Cambodian cuisine with a warm and welcoming atmosphere. Join us for an unforgettable dining experience.
-                </p>
-            </div>
+			<form id="reservation-form" class="bg-white p-6 rounded-lg shadow-md">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div>
+						<label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+						<input type="text" id="name" name="name" required
+							class="mt-1  block w-full border px-4 py-2 text-lg border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
+					</div>
+					<div>
+						<label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+						<input type="email" id="email" name="email" required
+							class="mt-1 block w-full border  px-4 py-2 text-lg border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
+					</div>
+				</div>
 
-            <!-- Quick Links Section -->
-            <div>
-                <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="/Restaurants_Web/index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
-                    <li><a href="/Menu/menu.html" class="text-gray-400 hover:text-white transition duration-200">Menu</a></li>
-                    <li><a href="/Resevations/reservations.html" class="text-gray-400 hover:text-white transition duration-200">Reservations</a></li>
-                    <li><a href="/Contact_us/contact.html" class="text-gray-400 hover:text-white transition duration-200">Contact Us</a></li>
-                </ul>
-            </div>
+				<div class="mt-4">
+					<label for="date" class="block text-sm font-medium text-gray-700">Date</label>
+					<input type="date" id="date" name="date" required
+						class="mt-1 block w-full border  px-4 py-2 text-lg border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
+				</div>
 
-            <!-- Contact Section -->
-            <div>
-                <h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
-                <p class="text-gray-400 text-sm mb-2">123 Khmer Street, Phnom Penh, Cambodia</p>
-                <p class="text-gray-400 text-sm mb-2">Phone: +855 96 728 033 1</p>
-                <p class="text-gray-400 text-sm">Email: info@trester.com</p>
-            </div>
-        </div>
+				<div class="mt-4">
+					<label for="time" class="block text-sm font-medium text-gray-700">Time</label>
+					<input type="time" id="time" name="time" required
+						class="mt-1 block w-full border  px-4 py-2 text-lg border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
+				</div>
 
-        <!-- Divider -->
-        <hr class="border-gray-700 my-8">
+				<div class="mt-4">
+					<label for="guests" class="block text-sm font-medium text-gray-700">Number of Guests</label>
+					<input type="number" id="guests" name="guests" required min="1" max="20"
+						class="mt-1 block w-full border  px-4 py-2 text-lg border-gray-300 rounded-md shadow-sm focus:ring focus:ring-yellow-600">
+				</div>
+				<div class="flex justify-center">
+                    <button type="submit"
+					class=" mt-6 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-12 rounded-md transition duration-200">
+					Reserve Table
+				   </button>
+			    </div>
 
-        <!-- Footer Bottom Section -->
-        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; 2023 T-Rester. All rights reserved.</p>
-            <div class="flex space-x-4">
-                <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="text-gray-400 hover:text-white transition duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.31h3.591l-.467 3.622h-3.124V24h6.116c.725 0 1.325-.6 1.325-1.324V1.325C24 .6 23.4 0 22.675 0z"/>
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/" class="text-gray-400 hover:text-white transition duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.332 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.265-.058 1.645-.07 4.849-.07zm0-2.163C8.756 0 8.332.012 7.052.07 5.771.128 4.525.396 3.515 1.406c-1.01 1.01-1.278 2.256-1.336 3.537C2.012 5.756 2 6.18 2 12s.012 6.244.07 7.524c.058 1.281.326 2.527 1.336 3.537 1.01 1.01 2.256 1.278 3.537 1.336 1.281.058 1.705.07 7.524.07s6.244-.012 7.524-.07c1.281-.058 2.527-.326 3.537-1.336 1.01-1.01 1.278-2.256 1.336-3.537.058-1.281.07-1.705.07-7.524s-.012-6.244-.07-7.524c-.058-1.281-.326-2.527-1.336-3.537-1.01-1.01-2.256-1.278-3.537-1.336C18.244.012 17.82 0 12 0z"/>
-                        <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88z"/>
-                    </svg>
-                </a>
-                <a href="https://x.com/" class="text-gray-400 hover:text-white transition duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.949.555-2.005.959-3.127 1.184-.896-.959-2.173-1.555-3.591-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124-4.087-.205-7.713-2.165-10.141-5.144-.422.722-.666 1.561-.666 2.475 0 1.708.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.927-.086.627 1.956 2.444 3.379 4.6 3.419-1.68 1.319-3.809 2.105-6.102 2.105-.396 0-.788-.023-1.175-.067 2.179 1.397 4.768 2.212 7.548 2.212 9.054 0 14.001-7.496 14.001-13.986 0-.213-.005-.425-.014-.637.961-.695 1.8-1.562 2.46-2.549z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
+			</form>
+		</div>
+	</section>
 
-<script src="reservations.js"></script>
+
+
+	<section class="py-16 bg-white">
+		<div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+			<div class="text-center md:text-left">
+				<h2 class="text-4xl font-bold text-gray-900 mb-6">Visit Us</h2>
+				<h3 class="text-2xl font-semibold text-gray-800 mb-4">Operating Hours</h3>
+				<ul class="text-lg text-gray-700 space-y-2 mb-6">
+					<li>** Monday - Friday:** 11:00 AM - 10:00 PM</li>
+					<li>** Saturday - Sunday:** 10:00 AM - 11:00 PM</li>
+					<li>** Public Holidays:** Please call for hours</li>
+				</ul>
+				<h3 class="text-2xl font-semibold text-gray-800 mb-4">Find Us</h3>
+				<p class="text-lg text-gray-700 mb-4">** 123 Khmer Street, Phnom Penh, Cambodia</p>
+				<p class="text-lg text-gray-700 mb-6">** Email: info@T-Rester.com</p>
+				<p class="text-lg text-gray-700 mb-6">** Phone: +855 96 728 033 1</p>
+				<a href="https://maps.app.goo.gl/YourGoogleMapsLink" target="_blank"
+					class="btn-primary inline-block">Get Directions</a>
+			</div>
+			<div class="map-placeholder bg-gray-300 w-full h-80 rounded-lg overflow-hidden shadow-lg">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.120023617196!2d104.91039868710332!3d11.558363765103444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513dc76a6be3%3A0x9c00e628ee3e911c!2sPhnom%20Penh%2C%20Cambodia!5e0!3m2!1sen!2suk!4v1701234567890!5m2!1sen!2suk"
+					width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					title="Google Maps Location of Delicious Bites"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="bg-gray-900 text-gray-300 py-10">
+		<div class="container mx-auto px-4">
+			<!-- Footer Top Section -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+				<!-- About Section -->
+				<div>
+					<h3 class="text-xl font-bold text-white mb-4">About Us</h3>
+					<p class="text-gray-400 text-sm">
+						T-Rester is dedicated to serving the finest Cambodian cuisine with a warm and welcoming
+						atmosphere. Join us for an unforgettable dining experience.
+					</p>
+				</div>
+
+				<!-- Quick Links Section -->
+				<div>
+					<h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+					<ul class="space-y-2">
+						<li><a href="/Restaurants_Web/index.html"
+								class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+						<li><a href="/Menu/menu.html"
+								class="text-gray-400 hover:text-white transition duration-200">Menu</a></li>
+						<li><a href="/Resevations/reservations.html"
+								class="text-gray-400 hover:text-white transition duration-200">Reservations</a></li>
+						<li><a href="/Contact_us/contact.html"
+								class="text-gray-400 hover:text-white transition duration-200">Contact Us</a></li>
+					</ul>
+				</div>
+
+				<!-- Contact Section -->
+				<div>
+					<h3 class="text-xl font-bold text-white mb-4">Contact Us</h3>
+					<p class="text-gray-400 text-sm mb-2">123 Khmer Street, Phnom Penh, Cambodia</p>
+					<p class="text-gray-400 text-sm mb-2">Phone: +855 96 728 033 1</p>
+					<p class="text-gray-400 text-sm">Email: info@trester.com</p>
+				</div>
+			</div>
+
+			<!-- Divider -->
+			<hr class="border-gray-700 my-8">
+
+			<!-- Footer Bottom Section -->
+			<div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+				<p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; 2023 T-Rester. All rights reserved.</p>
+				<div class="flex space-x-4">
+					<a href="https://web.facebook.com/?_rdc=1&_rdr#"
+						class="text-gray-400 hover:text-white transition duration-200">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.31h3.591l-.467 3.622h-3.124V24h6.116c.725 0 1.325-.6 1.325-1.324V1.325C24 .6 23.4 0 22.675 0z" />
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/" class="text-gray-400 hover:text-white transition duration-200">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.332 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.265-.058 1.645-.07 4.849-.07zm0-2.163C8.756 0 8.332.012 7.052.07 5.771.128 4.525.396 3.515 1.406c-1.01 1.01-1.278 2.256-1.336 3.537C2.012 5.756 2 6.18 2 12s.012 6.244.07 7.524c.058 1.281.326 2.527 1.336 3.537 1.01 1.01 2.256 1.278 3.537 1.336 1.281.058 1.705.07 7.524.07s6.244-.012 7.524-.07c1.281-.058 2.527-.326 3.537-1.336 1.01-1.01 1.278-2.256 1.336-3.537.058-1.281.07-1.705.07-7.524s-.012-6.244-.07-7.524c-.058-1.281-.326-2.527-1.336-3.537-1.01-1.01-2.256-1.278-3.537-1.336C18.244.012 17.82 0 12 0z" />
+							<path
+								d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88z" />
+						</svg>
+					</a>
+					<a href="https://x.com/" class="text-gray-400 hover:text-white transition duration-200">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.949.555-2.005.959-3.127 1.184-.896-.959-2.173-1.555-3.591-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124-4.087-.205-7.713-2.165-10.141-5.144-.422.722-.666 1.561-.666 2.475 0 1.708.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.927-.086.627 1.956 2.444 3.379 4.6 3.419-1.68 1.319-3.809 2.105-6.102 2.105-.396 0-.788-.023-1.175-.067 2.179 1.397 4.768 2.212 7.548 2.212 9.054 0 14.001-7.496 14.001-13.986 0-.213-.005-.425-.014-.637.961-.695 1.8-1.562 2.46-2.549z" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="reservations.js"></script>
 </body>
+
 </html>
