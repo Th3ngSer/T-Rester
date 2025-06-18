@@ -2,6 +2,7 @@ body {
     background-color: #0f172a;
     overflow-x: hidden;
     color: #ffffff;
+    font-family: 'Inter' ,sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -198,4 +199,38 @@ html {
         width: 90%; /* Make search form wider on small screens */
         max-width: none;
     }
+}
+
+/* NEW: Styles for the Image Modal */
+/* These styles are important for the modal to function correctly */
+#imageModal {
+    /* Tailwind classes replace many of these for modern approach: fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[100] hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in/out */
+    opacity: 0; /* Starts hidden */
+    pointer-events: none; /* Allows clicks to pass through when hidden */
+}
+
+#imageModal.visible {
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Re-enable clicks when visible */
+}
+
+#imageModal > div { /* Target the inner modal content */
+    /* Tailwind classes replace many of these: bg-white rounded-lg p-6 max-w-[80vw] max-h-[90vh] overflow-auto flex flex-col items-center relative text-gray-900 */
+    transform: scale(0.9); /* Starts slightly smaller for pop effect */
+    transition: transform 0.3s ease; /* Smooth pop-in */
+}
+
+#imageModal.visible > div {
+    transform: scale(1); /* Scales to normal size when visible */
+}
+
+
+/* Existing footer social icons */
+footer .flex a svg {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+footer .flex a:hover svg {
+    transform: translateY(-3px) scale(1.1);
+    color: #fff;
 }
