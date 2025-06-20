@@ -93,20 +93,18 @@ function setNavActive(linkHref) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".nav-link");
-    const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-link");
+  const currentPage = window.location.pathname.split("/").pop();
 
-    navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("text-white-700", "font-bold");
-        } else {
-            link.classList.remove("text-white-700", "font-bold");
-        }
-    });
-});
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href").split("/").pop();
+    if (href === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 
-
-document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector("header"); // Select the navigation bar
     let lastScrollPosition = 0; // Track the last scroll position
 

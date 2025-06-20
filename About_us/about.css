@@ -9,19 +9,10 @@ body {
     box-sizing: border-box;
 }
 
-
+/* Styling for the search bar container */
 #search-form {
     width: 250px; /* Default width */
     transition: width 0.3s ease; /* Smooth transition for width */
-}
-
-@media (min-width: 768px) { /* On medium screens and up */
-    #search-form {
-        width: 250px; /* Default width */
-    }
-    #search-form:hover {
-        width: 300px; /* Expand width on hover */
-    }
 }
 
 #search-form:hover {
@@ -61,20 +52,14 @@ nav ul li a:hover {
 
 /* Active state styling - adds underline */
 nav ul li a.active {
-  background-color: rgba(255, 215, 0, 0.1);
   color: #ffd700; 
+  background-color: rgba(255, 215, 0, 0.1);
 }
 
 /* Active state hover effect */
 nav ul li a.active:hover {
-  color: #ffd700;
   background-color: rgba(255, 215, 0, 0.2);
-}
-nav ul li a.nav-active { /* Changed from 'active' to 'nav-active' for clarity and to avoid conflicts */
-  background-color: rgba(255, 215, 0, 0.3); /* Slightly darker gold for active */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* More prominent shadow for active */
-  color: #ffd700; /* Gold text color for active */
-  transform: translateY(-2px); /* Maintain slight lift */
+  color: #ffd700;
 }
 
 /* Alternative underline animation effect  */
@@ -90,8 +75,11 @@ nav ul li a::after {
   transform: translateX(-50%);
 }
 
-nav ul li a:hover::after,
-nav ul li a.nav-active::after { /* Apply underline on active too */
+nav ul li a:hover::after {
+  width: 80%;
+}
+
+nav ul li a.active::after {
   width: 80%;
 }
 
