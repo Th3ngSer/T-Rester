@@ -130,6 +130,55 @@ nav ul li a[data-current="true"] {
         font-size: 1.8rem; 
         padding: 8px 12px;
     }
+    #mobile-menu {
+    display: none;
+    /* Hidden by default on mobile */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0f172a;
+    /* Same as header background */
+    position: absolute;
+    top: 100%;
+    /* Position below the main header */
+    left: 0;
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#mobile-menu.active {
+    display: flex;
+    /* Show when active */
+}
+
+#mobile-menu ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-right: 0;
+    /* Override previous margin */
+}
+
+#mobile-menu ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+    /* Adjust vertical spacing */
+}
+
+#mobile-menu ul li a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+}
+
+#mobile-menu #search-form {
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 25%;
+    width: 50%;
+}
+
 }
 @keyframes shimmer {
     0%, 100% { filter: brightness(1); }

@@ -203,3 +203,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+
+// Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden'); // Tailwind's hidden class
+            mobileMenu.classList.toggle('active'); // Custom class for animation/styling
+        });
+    }

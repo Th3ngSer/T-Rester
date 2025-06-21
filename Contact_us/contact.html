@@ -15,30 +15,42 @@
                 <img src="/Photo/Logo.png" class="w-15 h-20 rounded-full hover:text-sky-500 ext-5xl font-bold transition duration-200">
                 <p class="text-yellow-500 font-medium">T - Rester</p>
             </button>
-        <ul class="flex space-x-4 margin-right-8 text-xl">
-                <li><a href="/index.html" class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Home</a></li>
-                <li><a href="/About_us/about.html" class="nav-link text-yellow-500 hover:text-white-600 font-medium transition duration-200">About us</a></li>
-                <li><a href="/Menu/menu.html" class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Menu</a></li>
-                <li><a href="/Resevations/reservations.html" class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Pages</a></li>
-                <li><a href="/Contact_us/contact.html" class="nav-link text-yellow-500 hover:text-white-600 font-medium transition duration-200">Contact us</a></li>
-                <li>
-                    <form id="search-form" class="relative flex items-center bg-gray-200 rounded-full shadow-md hover:shadow-lg transition duration-300">
-                    <input 
-                        type="text" 
-                        id="search-input" 
-                        placeholder="Search..." 
-                        class="bg-transparent text-gray-700 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gold-700 w-48 transition duration-300"
-                    >
-                    <button 
-                        type="submit" 
-                        class="absolute right-2 text-gray-500 hover:text-gray-700 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m2.85-6.15a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </button>
-                    </form>
-                </li>
-            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-yellow-500 hover:text-white-700 focus:outline-none">
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <div id="mobile-menu" class="hidden md:flex flex-col md:flex-row items-center md:space-x-4">
+                <ul class="flex space-x-4 margin-right-8 text-xl">
+                    <li><a href="/index.html"
+                            class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Home</a></li>
+                    <li><a href="/About_us/about.html"
+                            class="nav-link text-yellow-500 hover:text-white-600 font-medium transition duration-200">About us</a>
+                    </li>
+                    <li><a href="/Menu/menu.html"
+                            class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Menu</a></li>
+                    <li><a href="/Resevations/reservations.html"
+                            class="nav-link text-yellow-500 hover:text-white-700 font-medium transition duration-200">Pages</a></li>
+                    <li><a href="/Contact_us/contact.html"
+                            class="nav-link text-yellow-500 hover:text-white-600 font-medium transition duration-200">Contact us</a>
+                    </li>
+                    <li>
+                        <form id="search-form"
+                            class="relative flex items-center bg-gray-200 rounded-full shadow-md hover:shadow-lg transition duration-300">
+                            <input type="text" id="search-input" placeholder="Search..."
+                                class="bg-transparent text-gray-700 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-gold-700 w-48 transition duration-300">
+                            <button type="submit"
+                                class="absolute right-2 text-gray-500 hover:text-gray-700 transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-4.35-4.35m2.85-6.15a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <hr class="border-t-2 border-gold-700 w-full mt-2">
     </header>
